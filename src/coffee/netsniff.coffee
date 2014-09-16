@@ -111,5 +111,5 @@ else
         document.title
 
       har = createHAR page.address, page.title, page.startTime, page.resources
-      console.log JSON.stringify har, undefined, 4
+      console.log JSON.stringify har
       phantom.exit()

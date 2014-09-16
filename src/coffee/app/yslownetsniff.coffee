@@ -3,6 +3,8 @@ childProcess = require('child_process')
 phantomjs = require('phantomjs')
 binPath = phantomjs.path
 
+fs = require('fs')
+
 if process.argv.length < 3
     console.log 'Usage: yslownetsniff.coffee <some URL>'
     process.exit 1
@@ -14,9 +16,16 @@ childArgs = [
   url
 ]
 
-ha
+processHARFile = (data) ->
+  processor = require('./harProcessor')
+  processor.processHAR(data)
+
+har = null
 childProcess.execFile(binPath, childArgs, (err, stdout, stderr) ->
-  console.log stdout
+  har = stdout
+  processHARFile(har)
 )
+
+
 
 

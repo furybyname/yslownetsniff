@@ -9,6 +9,7 @@
     "grunt-contrib-coffee": "*",
     "phantomjs": "~1.9.0-1",
     "grunt-lib-phantomjs": "0.2.0",
-    "yslow": "*"
+    "yslow": "*",
+    "jsdom": "*"
   }
 }

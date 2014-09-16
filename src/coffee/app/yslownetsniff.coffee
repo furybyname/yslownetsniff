@@ -14,6 +14,7 @@ childArgs = [
   url
 ]
 
+ha
 childProcess.execFile(binPath, childArgs, (err, stdout, stderr) ->
   console.log stdout
 )

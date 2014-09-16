@@ -6,11 +6,16 @@ module.exports = (grunt) ->
     coffee:
       app:
         expand: true
-        cwd: 'src/coffee'
+        cwd: 'src/coffee/lib'
         src: ['**/*.coffee']
-        dest: 'bin'
+        dest: 'lib'
         ext: '.js'
 
+      main:
+        expand: true
+        cwd: 'src/coffee/bin'
+        dest: 'bin'
+        ext: '.js'
     watch:
       app:
         files: ['**/*.coffee']

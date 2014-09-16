@@ -8,24 +8,16 @@ module.exports = (grunt) ->
         expand: true
         cwd: 'src/coffee'
         src: ['**/*.coffee']
-        dest: 'src/js'
+        dest: 'bin'
         ext: '.js'
-      test:
-        expand: true
-        cwd: 'src/coffee/test'
-        src: ['**/*.coffee']
-        dest: 'src/js/test'
-        ext: '.spec.js'
 
     watch:
       app:
-        files: ['**/*.coffee', '**/*.scss']
-        tasks: ['coffee', 'sass']
+        files: ['**/*.coffee']
+        tasks: ['coffee']
   )
 
-  # Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  # Default task(s).
   grunt.registerTask('default', ['coffee']);

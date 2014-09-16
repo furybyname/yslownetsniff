@@ -2,18 +2,9 @@
   "dependencies": {
     "grunt": "~0.4.2",
     "grunt-cli": "*",
-    "grunt-contrib-jshint": "~0.6.3",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-coffee": "0.11.1",
-    "grunt-contrib-sass": "~0.3.0",
     "grunt-contrib-watch": "*",
-    "grunt-contrib-nodeunit": "*",
-    "grunt-contrib-jasmine": "",
     "phantomjs": "~1.9.0-1",
     "grunt-lib-phantomjs": "0.2.0",
     "yslow": "*"
-  },
-  "devDependencies": {
-    "grunt-contrib-uglify": "~0.2.7"
   }
 }

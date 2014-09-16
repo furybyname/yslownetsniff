@@ -1,6 +1,6 @@
-path = require('path')
-childProcess = require('child_process')
-phantomjs = require('phantomjs')
+path = require 'path'
+childProcess = require 'child_process'
+phantomjs = require 'phantomjs'
 binPath = phantomjs.path
 
 fs = require('fs')
@@ -18,10 +18,10 @@ childArgs = [
 
 processHARFile = (data) ->
   processor = require('./harProcessor')
-  processor.processHAR(data)
+  return processor.processHAR(data)
 
-har = null
 childProcess.execFile(binPath, childArgs, (err, stdout, stderr) ->
   har = stdout
-  processHARFile(har)
+  result = processHARFile har
+  console.log JSON.stringify result
 )

@@ -7,7 +7,7 @@ processHAR = (data) ->
   res = YSlow.harImporter.run(doc, har, 'ydefault')
   content = YSlow.util.getResults(res.context, 'all')
 
-  console.log content
+  return content
 
 
 exports.processHAR = processHAR

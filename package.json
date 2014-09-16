@@ -1,7 +1,16 @@
 {
   "name": "yslownetsniff",
-  "description": "",
-  "author": "",
+  "description": "Use phantomjs netsniff example to load a web page and extract a HAR file, then process that HAR file with YSlow",
+  "author": "Dave Archer",
+  "version": "0.1.1",
+  "repository": {
+    "url": "git@github.com:furybyname/yslownetsniff.git",
+    "type": "git"
+  },
+  "main": "./lib/main",
+  "bin": {
+    "yslownetsniff": "./bin/yslownetsniff"
+  },
   "dependencies": {
     "grunt": "~0.4.2",
     "grunt-cli": "*",
@@ -11,5 +20,8 @@
     "grunt-lib-phantomjs": "0.2.0",
     "yslow": "*",
     "jsdom": "*"
+  },
+  "engines": {
+      "node": "*"
   }
 }

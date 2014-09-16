@@ -2,4 +2,15 @@
 var path = require('path');
 var fs = require('fs');
 var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
-require(lib + '/main.js');
+var main = require(lib + '/main.js');
+
+if (process.argv.length < 3) {
+    console.log('Usage: yslownetsniff.coffee <some URL>');
+    process.exit(1);
+}
+
+
+mainUrl = process.argv[2];
+
+
+main.run(mainUrl, function(result) { console.log(result) });

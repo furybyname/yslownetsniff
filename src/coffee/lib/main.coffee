@@ -3,11 +3,6 @@ childProcess = require 'child_process'
 phantomjs = require 'phantomjs'
 binPath = phantomjs.path
 
-if process.argv.length < 3
-  console.log 'Usage: yslownetsniff.coffee <some URL>'
-  process.exit(1)
-
-mainUrl = process.argv[2]
 
 processHARFile = (data) ->
   processor = require('./harProcessor')
@@ -19,13 +14,11 @@ run = (url, callback) ->
     url
   ]
 
-  childProcess.execFile(binPath, childArgs, (err, stdout, stderr) ->
+  childProcess.execFile(binPath, childArgs, (err, stdOut, stdErr) ->
 
-    har = stdout
+    har = stdOut
     result = processHARFile har
     callback result
   )
-
-run(mainUrl, (result) -> console.log(result))
 
 exports.run = run

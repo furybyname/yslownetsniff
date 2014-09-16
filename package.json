@@ -2,7 +2,7 @@
   "name": "yslownetsniff",
   "description": "Use phantomjs netsniff example to load a web page and extract a HAR file, then process that HAR file with YSlow",
   "author": "Dave Archer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "url": "git@github.com:furybyname/yslownetsniff.git",
     "type": "git"

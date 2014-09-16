@@ -1,7 +1,7 @@
 YSlowNetSniff
 =============
 
-(PhantomJs) NetSniff a har file and process with YSlow
+Use (PhantomJs) NetSniff.js to build a har file then process with YSlow
 
 ## Installation
 

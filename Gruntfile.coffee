@@ -2,7 +2,7 @@ module.exports = (grunt) ->
 
   grunt.initConfig(
     pkg     : grunt.file.readJSON('package.json'),
-    
+
     coffee:
       app:
         expand: true
@@ -16,7 +16,7 @@ module.exports = (grunt) ->
         src: ['**/*.coffee']
         dest: 'src/js/test'
         ext: '.spec.js'
-    
+
     watch:
       app:
         files: ['**/*.coffee', '**/*.scss']
@@ -28,4 +28,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
   # Default task(s).
-  grunt.registerTask('default', ['coffee'])
+  grunt.registerTask('default', ['coffee']);

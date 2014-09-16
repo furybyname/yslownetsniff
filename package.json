@@ -8,9 +8,7 @@
     "type": "git"
   },
   "main": "./lib/main",
-  "bin": {
-    "yslownetsniff": "./bin/yslownetsniff"
-  },
+  "bin": "./bin/yslownetsniff",
   "dependencies": {
     "grunt": "~0.4.2",
     "grunt-cli": "*",

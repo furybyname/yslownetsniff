@@ -17,9 +17,9 @@ or `yslownetsniff http://www.somewebsite.com`
 
 ### Usage as a module
 
-'''
+```
 require('yslownetsniff').run('http://somewebsite.com', function(result) { console.log(result); });
-'''
+```
 
 # From source
 

@@ -29,5 +29,5 @@ or `yslownetsniff http://www.somewebsite.com`
 
 ### Usage
 
-`node lib/main.js http://somewebsite.com`
+`node bin/yslownetsniff http://somewebsite.com`
  
